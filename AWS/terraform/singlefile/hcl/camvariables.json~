@@ -32,7 +32,26 @@
         "required": true,
         "immutable": false
     },
-    
+    {
+        "description": "Name of the Virtual Private Cloud (VPC) this resource is going to be deployed into",
+        "hidden": false,
+        "immutable": false,
+        "label": "Virtual Private Cloud",
+        "name": "vpc_name_tag",
+        "required": true,
+        "secured": false,
+        "type": "string"
+    },
+    {
+        "description": "subnet cidr",
+        "hidden": false,
+        "immutable": false,
+        "label": "Subnet CIDR",
+        "name": "subnet_cidr",
+        "required": true,
+        "secured": false,
+        "type": "string"
+    },
     {
         "description": "Name of the public SSH key used to connect to the virtual guest",
         "hidden": false,
