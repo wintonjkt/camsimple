@@ -51,13 +51,13 @@ data "aws_ami" "aws_ami" {
   owners = ["${var.aws_ami_owner_id}"]
 }
 
-resource "aws_key_pair" "orpheus_public_key" {
-  key_name   = "${var.public_ssh_key_name}"
-  public_key = "${var.public_ssh_key}"
-}
+#resource "aws_key_pair" "orpheus_public_key" {
+#  key_name   = "${var.public_ssh_key_name}"
+#  public_key = "${var.public_ssh_key}"
+#}
 
 resource "aws_instance" "orpheus_ubuntu_micro" {
   instance_type = "t2.micro"
   ami           = "${data.aws_ami.aws_ami.id}"
-  key_name      = "${aws_key_pair.orpheus_public_key.id}"
+#  key_name      = "${aws_key_pair.orpheus_public_key.id}"
 }
